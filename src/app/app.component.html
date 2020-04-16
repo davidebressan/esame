@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo List</title>
+</head>
+<body>
+  <h1>ToDo List</h1>
+
+  <form (ngSubmit)="onAdd()">
+    <input type="text" autofocus autocomplete=off name="cosa" placeholder="New Task" value="" [(ngModel)]="item" required>
+    <input type="submit" value="Add" [disabled]="item == null ">
+  </form>
+
+  <div *ngFor="let item of list; let idx = index">
+    <input type="checkbox" name="" value="">
+    <p> {{ item }} </p>
+    <input type="button" value="delete" (click)="delete(idx)">
+  </div>
+
+</body>
+</html>

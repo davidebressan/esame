@@ -1,0 +1,11 @@
+div {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input[type="submit"] {
+    margin-left:20px;
+}
